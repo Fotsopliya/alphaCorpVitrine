@@ -1,6 +1,5 @@
 import Footer from '@components/Footer'
 import Navbar from '@components/Navbar'
-import ActiveSectionContextProvider from '@context/active-section-context'
 import '@styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -25,12 +24,10 @@ export default function RootLayout({
           <div className='gradient' />
         </div>
         <main className='app'>
-          <ActiveSectionContextProvider>
             <Navbar />
             {children}
             <Footer />
             <Toaster position="top-center"/>
-          </ActiveSectionContextProvider>
         </main>
       </body>
     </html>
