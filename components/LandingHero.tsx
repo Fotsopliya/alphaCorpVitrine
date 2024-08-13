@@ -16,7 +16,7 @@ const LandingHero = () => {
                     <TypewriterComponent
                         options={{
                             strings: [
-                                "solution logicielle selon vos besoins spécifiques.",
+                                "solution logiciel selon vos besoins spécifiques.",
                                 "solution web selon vos besoins spécifiques.",
                                 "solution mobile selon vos besoins spécifiques.",
                             ],
