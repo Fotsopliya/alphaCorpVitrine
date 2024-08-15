@@ -1,25 +1,26 @@
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import LanguageSwitcher from './ui/LanguageSwitcher';
 
 const Footer = () => {
   return (
     <footer className="bg-slate-50 py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/4 xl:w-1/4 p-4">
-            <div className='flex justify-start'>
+        <div className="flex flex-wrap -mx-4 justify-between">
+          {/* Logo and Social Media Section */}
+          <div className="w-full md:w-1/3 p-4">
+            <div className='flex items-center mb-6'>
               <Image
-              src="/logo.png"
-              width={60}
-              height={60}
-              alt="Alpha Corp logo"
+                src="/logo.png"
+                width={60}
+                height={60}
+                alt="Alpha Corp logo"
               />
-              <p className='font-extrabold text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-fuchsia-400'>Alpha Corp</p>
+              <p className='font-extrabold text-2xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-fuchsia-400 ml-3'>Alpha Corp</p>
             </div> 
-            <h3 className='pt-10'>Nous suivre</h3>
+            <h3 className='pt-5 md:pt-10 text-lg md:text-xl text-gray-700'>Nous suivre</h3>
             <ul className="flex mt-4 text-lg">
               <li className="mr-6">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
@@ -43,8 +44,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/2 xl:w-1/2 p-4">
-            <h5 className="uppercase text-gray-600 mb-4 font-bold">Liens utiles</h5>
+
+          {/* Useful Links Section */}
+          <div className="w-full md:w-1/3 p-4">
+            <h5 className="uppercase text-gray-600 mb-4 font-bold text-lg">Liens utiles</h5>
             <ul>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
@@ -63,8 +66,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/4 xl:w-1/4 p-4">
-            <h5 className="uppercase text-gray-600 mb-4 font-bold">Newsletter</h5>
+
+          {/* Newsletter Section */}
+          <div className="w-full md:w-1/3 p-4">
+            <h5 className="uppercase text-gray-600 mb-4 font-bold text-lg">Newsletter</h5>
             <p className="text-gray-600 mb-4">
               Inscrivez-vous à notre newsletter pour recevoir les dernières
               actualités.
@@ -74,10 +79,20 @@ const Footer = () => {
               placeholder="Adresse e-mail"
               className="w-full p-2 mb-4 border border-gray-400"
             />
-            <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
               S'inscrire
             </button>
           </div>
+        </div>
+
+        {/* Language Switcher */}
+        <div className="mt-10">
+          <LanguageSwitcher />
+        </div>
+
+        {/* Copyright Section */}
+        <div className="mt-8 text-center text-gray-600 text-sm">
+          <p>&copy; {new Date().getFullYear()} Alpha Corp. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,37 @@
+.select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  .select-wrapper .flags {
+    position: absolute;
+    /* top: -2.5rem; */
+    left: 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .select-wrapper .flags img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .select-wrapper .flags img.scale-110 {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .select-wrapper .flags img.scale-100 {
+    opacity: 0.5;
+  }
+  
