@@ -1,10 +1,42 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import LanguageSwitcher from './ui/LanguageSwitcher';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubscribe = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(data.message);
+        setEmail('');
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error('Error subscribing to newsletter');
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <footer className="bg-slate-50 py-12">
       <div className="container mx-auto px-4">
@@ -74,14 +106,23 @@ const Footer = () => {
               Inscrivez-vous à notre newsletter pour recevoir les dernières
               actualités.
             </p>
-            <input
-              type="email"
-              placeholder="Adresse e-mail"
-              className="w-full p-2 mb-4 border border-gray-400"
-            />
-            <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
-              S'inscrire
-            </button>
+            <form onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                placeholder="Adresse e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-2 mb-4 border border-gray-400"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded"
+                disabled={loading}
+              >
+                {loading ? 'S\'inscrire...' : 'S\'inscrire'}
+              </button>
+            </form>
           </div>
         </div>
 
@@ -89,7 +130,7 @@ const Footer = () => {
         <div className="mt-10">
           <LanguageSwitcher />
         </div>
-
+        <Toaster />
         {/* Copyright Section */}
         <div className="mt-8 text-center text-gray-600 text-sm">
           <p>&copy; {new Date().getFullYear()} Alpha Corp. Tous droits réservés.</p>
