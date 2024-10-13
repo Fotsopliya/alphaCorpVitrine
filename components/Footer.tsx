@@ -83,12 +83,17 @@ const Footer = () => {
             <ul>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  À propos
+                  À propos d'Alpha Corp
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Contact
+                  Contactez-nous
+                </Link>
+              </li>
+              <li className="mb-4">
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  Actualités
                 </Link>
               </li>
               <li className="mb-4">

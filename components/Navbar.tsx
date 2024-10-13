@@ -46,7 +46,7 @@ const Navbar = () => {
             const isActive = pathname === item.route;
             const translatedLabel = t(`${item.label}`);
 
-            return item.label === 'Contact' ? (
+            return item.label === 'Contactez-nous' ? (
               <Link key={item.label} href={item.route}>
                 <button className='text-lg hover:underline p-2 bg-blue-700 text-white rounded'>
                   {translatedLabel}

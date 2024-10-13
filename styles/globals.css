@@ -67,7 +67,7 @@
 .app {
     @apply relative z-10 ;
 }
-
+/* 
 @keyframes spin-flip {
 
     0%,
@@ -93,11 +93,20 @@
     }
 }
 
-/* @keyframes flip {
-    0%, 100% { transform: rotateY(0deg); }
-    50% { transform: rotateY(180deg); }
-} */
 .animate-spin-flip {
     animation: spin-flip 6s linear infinite;
+} */
+
+@keyframes spin3d {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }
 
+.animate-spin-3d {
+    animation: spin3d 5s linear infinite;
+    transform-style: preserve-3d;
+}

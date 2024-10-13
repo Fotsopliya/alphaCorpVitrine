@@ -19,7 +19,7 @@ export const navbarLinks = [
     },
     {
         route: "/contact",
-        label: "Contact"
+        label: "Contactez-nous"
     }
 ]
 
@@ -76,5 +76,30 @@ export const services = [
         image: "/img/services/des2.jpg",
         title: "Assistance 7j/7",
         desc: "Ce service est là pour répondre à vos..."
+    }
+]
+
+export const blogPosts = [
+    {
+        "id": 1,
+        "title": "Lancement du nouveau projet d'intelligence artificielle",
+        "description": "Notre start-up a récemment lancé un projet innovant en intelligence artificielle pour automatiser les processus de service client.",
+        "date": "10 Aout, 2024",
+        "author": "Alice Dupont",
+        "imageUrl": "/img/services/des2.jpg",
+        "alt": "aiProject",
+        "content": "Nous sommes fiers d'annoncer le lancement de notre tout nouveau projet d'intelligence artificielle, conçu pour automatiser et optimiser les processus de service client. Ce projet utilise des algorithmes avancés pour analyser les interactions client et fournir des réponses instantanées et personnalisées. L'équipe travaille sur ce projet depuis plusieurs mois et nous sommes ravis de partager les premiers résultats prometteurs.",
+        "tags": ["Intelligence Artificielle", "Service Client", "Innovation"]
+    },
+    {
+        "id": 2,
+        "title": "Partenariat stratégique avec une entreprise de biotechnologie",
+        "description": "Nous avons signé un partenariat stratégique avec BioTech Innovators pour développer des solutions technologiques dans le domaine de la santé.",
+        "date": "28 juillet, 2024",
+        "author": "Jean Martin",
+        "imageUrl": "/img/services/des1.jpg",
+        "alt": "partenaria",
+        "content": "Dans le cadre de notre expansion dans le domaine de la santé, nous sommes ravis d'annoncer un partenariat stratégique avec BioTech Innovators, une entreprise de premier plan dans le domaine de la biotechnologie. Ce partenariat vise à combiner nos compétences en développement technologique avec leur expertise en biotechnologie pour créer des solutions innovantes destinées à améliorer les soins de santé.",
+        "tags": ["Partenaria, santé, biotechnologie"]
     }
 ]

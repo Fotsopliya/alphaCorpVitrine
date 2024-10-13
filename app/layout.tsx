@@ -1,9 +1,7 @@
-import Footer from '@components/Footer'
-import Navbar from '@components/Navbar'
+import { ClerkProvider } from '@clerk/nextjs'
 import '@styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Toaster } from "react-hot-toast"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,18 +16,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <ClerkProvider>
+      <html lang="en">
       <body className={inter.className}>
-        <div className='main'>
-          <div className='gradient' />
-        </div>
-        <main className='app'>
-            <Navbar />
-            {children}
-            <Footer />
-            <Toaster position="top-center" />
-        </main>
+        {children}
       </body>
     </html>
+    </ClerkProvider>
+    
   )
 }

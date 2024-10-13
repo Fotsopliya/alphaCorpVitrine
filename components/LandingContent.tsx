@@ -14,10 +14,10 @@ const LandingContent = () => {
                         width={60}
                         height={60}
                         alt="Alpha Corp logo"
-                        className='animate-spin-flip'
+                        className='animate-spin-3d'
                     />
                     <h1 className='font-extrabold p-5 uppercase text-2xl md:text-4xl'>Alpha Corp</h1>
-                </div>
+                </div> 
                 <p className='text-base md:text-2xl lg:text-3xl font-light w-full md:w-[80%] lg:w-[60%] self-center'>
                     Alpha Corp élabore des solutions informatiques (web, SAAS, logistiques, etc) sur mesure, pour permettre à ses bénéficiaires de développer leur activité et d'atteindre leurs objectifs.
                 </p>

@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.3.2",
+    "@prisma/client": "^5.18.0",
     "@react-email/components": "0.0.22",
     "@react-email/tailwind": "0.0.19",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "bcrypt": "^5.1.1",
     "eslint": "8.49.0",
     "eslint-config-next": "^14.2.5",
     "framer-motion": "^11.3.24",
@@ -39,5 +42,9 @@
     "typescript": "5.2.2",
     "typewriter-effect": "^2.21.0"
   },
-  "proxy": "https://api.resend.com/"
+  "proxy": "https://api.resend.com/",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "prisma": "^5.18.0"
+  }
 }
