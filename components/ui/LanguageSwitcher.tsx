@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { useState } from 'react';
 import i18n from '@lib/i18n';
-import '@styles/lang.css'
+import '../../styles/language.css'
 
 // Define the structure for each language object
 interface Language {
