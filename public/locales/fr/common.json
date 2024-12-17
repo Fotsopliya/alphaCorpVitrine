@@ -1,16 +1,27 @@
 {
-    "Analyse et conception de votre": "Analyse et conception de votre",
-    "TypewriterStrings": [
+  "Analyse et conception de votre": "Analyse et conception de votre",
+
+  "TypewriterStrings": [
     "solution logiciel selon vos besoins spécifiques.",
     "solution web selon vos besoins spécifiques.",
     "solution mobile selon vos besoins spécifiques."
-    ],
-    "navbarLinks": {
-    "Accueil":"Accueil" ,
-    "À propos":"À propos" ,
-    "Services": "Services",
-    "Contact": "Contact"
-  },
-  "Découvrez nos services": "Découvrez nos services"
-}
+  ],
 
+  "pour le développement d'applications web.": "pour le développement d'application web.",
+  "pour le développement d'application mobile.": "pour le développement d'application mobile.",
+  "pour le développement d'application hybride.": "pour le développement d'application hybride.",
+  "pour la conception de logiciel bureautique, SAAS et plus encore.": "pour la conception de logiciel bureautique, SAAS et plus encore.",
+
+  "Accueil": "Accueil",
+  "Notre équipe dirigeante": "Notre équipe dirigeante",
+  "Nos services": "Nos services",
+  "Contactez-nous": "Contactez-nous",
+
+  "Découvrez nos services": "Découvrez nos services",
+  "En savoir plus": "En savoir plus",
+
+  "Analyse et conception de vos": "Analyse et conception de vos",
+
+  "Nous suivre": "Nous suivre",
+  "Liens utiles": "Liens utiles"
+}

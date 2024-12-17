@@ -1,13 +1,14 @@
 import boardImage from "@public/board.png"
-import Pliya from "@public/img/team/pliya.jpg"
+import Pliya from "@public/img/team/pliya.png"
 import Stephane from "@public/img/team/StephaneG.jpg"
 import logo from "@public/logo.png"
+
 
 
 export const navbarLinks = [
     {
         route: "/",
-        label: "Acceuil"
+        label: "Accueil"
     },
     {
         route: "/services",

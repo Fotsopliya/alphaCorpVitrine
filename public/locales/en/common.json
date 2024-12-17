@@ -1,17 +1,28 @@
 {
-    "Analyse et conception de votre": "Analysis and design of your",
-    "TypewriterStrings": [
+  "Analyse et conception de votre": "Analysis and design of your",
+
+  "TypewriterStrings": [
     "software solution tailored to your specific needs.",
     "web solution tailored to your specific needs.",
     "mobile solution tailored to your specific needs."
-    ],
-    "navbarLinks": {
-    "Accueil": "Home",
-    "À propos": "About",
-    "Services": "Services",
-    "Contact": "Contact"
-  },
-    "Découvrez nos services": "Discover our services"
+  ],
+
+  "pour le développement d'applications web.": "for the developpement of web applications",
+  "pour le développement d'application mobile.": "for the developpement of mobile  applications",
+  "pour le développement d'application hybride.": "for the developpement of hybride applications",
+  "pour la conception de logiciel bureautique, SAAS et plus encore.": "for the developpement of desktop software, software as a service (SAAS) and more.",
+
+  "Accueil": "Home",
+  "Notre équipe dirigeante": "Our Team",
+  "Nos services": "Our Services",
+  "Contactez-nous": "Contact us",
+
+  "Découvrez nos services": "Discover our services",
+  
+  "En savoir plus": "Learn More",
+
+  "Analyse et conception de vos": "Analysis and conception of your",
+
+  "Nous suivre": "Follow us",
+  "Liens utiles": "Usefull links"
 }
-
-

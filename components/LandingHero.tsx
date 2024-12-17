@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import TypewriterComponent from 'typewriter-effect';
+
 import { useTranslation } from 'react-i18next';
 
 function LandingHero() {
@@ -14,13 +15,13 @@ function LandingHero() {
         setHasMounted(true);
     }, []);
 
-    const typewriterStrings = t('TypewriterStrings', { returnObjects: true }) as string[];
+    const typewriterStrings = t("TypewriterStrings", { returnObjects: true }) as string[];
 
     return (
         <div className='px-4 md:px-[7%] flex flex-col md:flex-row justify-between items-center'>
             <div className='w-full md:w-1/2 p-4 md:p-7 text-2xl md:text-4xl'>
                 <h1 className='font-extrabold p-2 uppercase text-3xl md:text-5xl'>Alpha Corp</h1>
-                <p className='font-light mt-4 text-lg md:text-xl'>{t('Analyse et conception de votre')}</p>
+                <p className='font-light mt-4 text-lg md:text-xl'>{t('Analyse et conception de vos')}</p>
                 {hasMounted && (
                     <div className="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                         <TypewriterComponent

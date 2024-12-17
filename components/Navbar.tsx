@@ -9,13 +9,15 @@ import { useTranslation } from 'react-i18next';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common'); 
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // const translatedLabel = t("NavbarLinks", { returnObjects: true }) as string[];
 
   return (
     <section className='px-4 md:px-[5%] py-4 shadow-md justify-center mb-10 z-30 top-0 left-0 right-0 bg-slate-50'>
@@ -44,12 +46,11 @@ const Navbar = () => {
         <div className='hidden md:flex gap-5 items-center'>
           {navbarLinks.map((item) => {
             const isActive = pathname === item.route;
-            const translatedLabel = t(`${item.label}`);
 
             return item.label === 'Contactez-nous' ? (
               <Link key={item.label} href={item.route}>
                 <button className='text-lg hover:underline p-2 bg-blue-700 text-white rounded'>
-                  {translatedLabel}
+                  {t(item.label)}
                 </button>
               </Link>
             ) : (
@@ -59,7 +60,7 @@ const Navbar = () => {
                 className={isActive ? 'text-blue-500 font-bold' : 'text-black'}
               >
                 <p className='text-lg'>
-                  <span className='hover:underline'>{translatedLabel}</span>
+                  <span className='hover:underline'>{t(item.label)}</span>
                 </p>
               </Link>
             );
@@ -71,12 +72,11 @@ const Navbar = () => {
           <div className='absolute top-16 left-0 w-full bg-slate-50 shadow-md md:hidden flex flex-col items-center gap-5 py-5'>
             {navbarLinks.map((item) => {
               const isActive = pathname === item.route;
-              const translatedLabel = t(`${item.label}`);
 
-              return item.label === 'Contact' ? (
+              return item.label === 'Contactez-nous' ? (
                 <Link key={item.label} href={item.route} onClick={toggleMobileMenu}>
                   <button className='text-lg hover:underline p-2 bg-blue-700 text-white rounded w-full text-center'>
-                    {translatedLabel}
+                  {t(item.label)}
                   </button>
                 </Link>
               ) : (
@@ -87,7 +87,7 @@ const Navbar = () => {
                   onClick={toggleMobileMenu}
                 >
                   <p className='text-lg'>
-                    <span className='hover:underline'>{translatedLabel}</span>
+                    <span className='hover:underline'>{t(item.label)}</span>
                   </p>
                 </Link>
               );

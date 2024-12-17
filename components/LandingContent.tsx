@@ -3,10 +3,24 @@ import LandingCard from './ui/LandingCard';
 import Image from 'next/image';
 import ServiceCard from './ui/ServiceCard';
 import { services } from '@lib/data';
+import { motion } from 'framer-motion';
 
 const LandingContent = () => {
     return (
-        <section>
+        <motion.section
+            initial={{
+                opacity: 0,
+            }}
+            whileInView={{
+                opacity: 1,
+            }}
+            transition={{
+                duration: 1,
+            }}
+            viewport={{
+                once: true,
+            }}
+        >
             <div className='flex flex-col text-center m-4 md:m-12 p-4'>
                 <div className='flex flex-col items-center justify-center'>
                     <Image
@@ -17,7 +31,7 @@ const LandingContent = () => {
                         className='animate-spin-3d'
                     />
                     <h1 className='font-extrabold p-5 uppercase text-2xl md:text-4xl'>Alpha Corp</h1>
-                </div> 
+                </div>
                 <p className='text-base md:text-2xl lg:text-3xl font-light w-full md:w-[80%] lg:w-[60%] self-center'>
                     Alpha Corp élabore des solutions informatiques (web, SAAS, logistiques, etc) sur mesure, pour permettre à ses bénéficiaires de développer leur activité et d'atteindre leurs objectifs.
                 </p>
@@ -39,7 +53,7 @@ const LandingContent = () => {
             <div className='mx-[3%] my-6'>
                 <LandingCard />
             </div>
-        </section>
+        </motion.section>
     );
 };
 

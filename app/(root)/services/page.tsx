@@ -20,10 +20,10 @@ const ServicePage = () => {
           <TypewriterComponent
             options={{
               strings: [
-                "pour le développement d'application web.",
-                "pour le développement d'application mobile.",
-                "pour le développement d'application hybride.",
-                "pour la conception de logiciel bureautique, SAAS et plus encore.",
+                t("pour le développement d'applications web."),
+                t("pour le développement d'application mobile."),
+                t("pour le développement d'application hybride."),
+                t("pour la conception de logiciel bureautique, SAAS et plus encore."),
               ],
               autoStart: true,
               loop: true,

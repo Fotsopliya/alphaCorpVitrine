@@ -6,11 +6,13 @@ import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import LanguageSwitcher from './ui/LanguageSwitcher';
 import toast, { Toaster } from 'react-hot-toast';
+import { useTranslation } from 'next-i18next';
 
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation('common');
 
   const handleSubscribe = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -52,7 +54,7 @@ const Footer = () => {
               />
               <p className='font-extrabold text-2xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-fuchsia-400 ml-3'>Alpha Corp</p>
             </div> 
-            <h3 className='pt-5 md:pt-10 text-lg md:text-xl text-gray-700'>Nous suivre</h3>
+            <h3 className='pt-5 md:pt-10 text-lg md:text-xl text-gray-700'>{t("Nous suivre")}</h3>
             <ul className="flex mt-4 text-lg">
               <li className="mr-6">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
@@ -79,7 +81,7 @@ const Footer = () => {
 
           {/* Useful Links Section */}
           <div className="w-full md:w-1/3 p-4">
-            <h5 className="uppercase text-gray-600 mb-4 font-bold text-lg">Liens utiles</h5>
+            <h5 className="uppercase text-gray-600 mb-4 font-bold text-lg">{t("Liens utiles")}</h5>
             <ul>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">

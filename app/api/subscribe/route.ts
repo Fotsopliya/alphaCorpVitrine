@@ -15,12 +15,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Subscription successful' });
   } catch (error) {
     console.error('Database error:', error);
-
-    // Check if the error is due to a unique constraint violation
-    if (error.code === '23505') {
-      return NextResponse.json({ message: 'This email is already subscribed' }, { status: 409 });
+    // Vérifier si l'erreur est due à une violation de contrainte unique
+    if (error instanceof Error && (error as any).code === '23505') {
+      return NextResponse.json({ message: 'Cet email est déjà inscrit' }, { status: 409 });
     }
 
-    return NextResponse.json({ message: 'Subscription failed' }, { status: 500 });
+    return NextResponse.json({ message: 'L\'inscription a échoué' }, { status: 500 });
   }
 }

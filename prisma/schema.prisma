@@ -9,7 +9,6 @@ generator client {
 
 model admins {
     id           Int      @id @default(autoincrement())
-    email        String   @unique
     username     String   @unique
     password     String
     created_at   DateTime @default(now())
