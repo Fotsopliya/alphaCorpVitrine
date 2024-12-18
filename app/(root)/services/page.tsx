@@ -47,4 +47,4 @@ const ServicePage = () => {
   )
 }
 
-export default appWithTranslation(ServicePage)
+export default ServicePage
