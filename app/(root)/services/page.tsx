@@ -3,7 +3,6 @@
 import LinkToArticles from '@components/LinkToArticles'
 import ServiceCard from '@components/ui/ServiceCard'
 import { services } from '@lib/data'
-import { appWithTranslation } from 'next-i18next'
 import React from 'react'
 import TypewriterComponent from 'typewriter-effect'
 import { useTranslation } from 'react-i18next';
