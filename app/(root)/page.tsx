@@ -3,7 +3,6 @@ import LandingContent from '@components/LandingContent'
 import LandingHero from '@components/LandingHero'
 import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
-import { appWithTranslation } from 'next-i18next';
 
 function Home() {
   return (

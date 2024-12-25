@@ -1,3 +1,5 @@
+"use client"
+
 import Contact from '@components/Contact'
 import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'

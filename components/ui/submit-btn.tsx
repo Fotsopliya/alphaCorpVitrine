@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useTransition } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 
