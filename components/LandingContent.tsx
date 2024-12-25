@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import LandingCard from './ui/LandingCard';
 import Image from 'next/image';

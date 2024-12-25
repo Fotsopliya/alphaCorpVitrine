@@ -1,4 +1,5 @@
 "use client"
+
 import LandingContent from '@components/LandingContent'
 import LandingHero from '@components/LandingHero'
 import LinkToArticles from '@components/LinkToArticles'
