@@ -5,19 +5,18 @@ import BlogCard from "@components/ui/BlogCard";
 import Loader from '@components/Loader';
 
 const NewsPage = () => {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Simuler le chargement des données
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-        return () => clearTimeout(timer);
-    }, []);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setLoading(false);
+    //     }, 2000);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
-    if (loading) {
-        return <Loader />;
-    }
+    // if (loading) {
+    //     return <Loader />;
+    // }
     return (
         <div className='mx-[5%]'>
             <h1 className='text-4xl font-bold p-10 text-gray-600'>Newsroom</h1>
