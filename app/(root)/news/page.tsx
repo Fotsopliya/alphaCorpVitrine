@@ -1,22 +1,9 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import BlogCard from "@components/ui/BlogCard";
-import Loader from '@components/Loader';
 
 const NewsPage = () => {
-    // const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setLoading(false);
-    //     }, 2000);
-    //     return () => clearTimeout(timer);
-    // }, []);
-
-    // if (loading) {
-    //     return <Loader />;
-    // }
     return (
         <div className='mx-[5%]'>
             <h1 className='text-4xl font-bold p-10 text-gray-600'>Newsroom</h1>

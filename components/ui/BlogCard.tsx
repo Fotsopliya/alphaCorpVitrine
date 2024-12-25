@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import {blogPosts, boardMembers} from "@lib/data";
 import Image from "@node_modules/next/image";
