@@ -1,3 +1,5 @@
+"use client"
+
 import BoardCard from '@components/ui/BoardCard'
 import React from 'react'
 
