@@ -85,22 +85,22 @@ const Footer = () => {
             <ul>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  À propos d'Alpha Corp
+                  {t("À propos d'Alpha Corp")}
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Contactez-nous
+                  {t("Contactez-nous")}
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Actualités
+                  {t("Actualités")}
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Mentions légales
+                  {t("Mentions légales")}
                 </Link>
               </li>
             </ul>
@@ -110,8 +110,7 @@ const Footer = () => {
           <div className="w-full md:w-1/3 p-4">
             <h5 className="uppercase text-gray-600 mb-4 font-bold text-lg">Newsletter</h5>
             <p className="text-gray-600 mb-4">
-              Inscrivez-vous à notre newsletter pour recevoir les dernières
-              actualités.
+              {t("Inscrivez-vous à notre newsletter pour recevoir les dernières actualités.")}
             </p>
             <form onSubmit={handleSubscribe}>
               <input
