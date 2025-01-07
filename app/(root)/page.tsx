@@ -1,11 +1,15 @@
+"use client"
+
 import dynamic from 'next/dynamic';
 // import LandingContent from '@components/LandingContent'
 // import LandingHero from '@components/LandingHero'
-import LinkToArticles from '@components/LinkToArticles'
+// import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
 
-const LandingContent = dynamic(() => import('@components/LandingContent'), { ssr: true, });
-const LandingHero = dynamic(() => import('@components/LandingHero'), { ssr: true, });
+const LandingContent = dynamic(() => import('@components/LandingContent'), { ssr: false, });
+const LandingHero = dynamic(() => import('@components/LandingHero'), { ssr: false, });
+const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: false });
+
 
 function Home() {
   return (

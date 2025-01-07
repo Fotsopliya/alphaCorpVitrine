@@ -1,11 +1,14 @@
 "use client"
 
-import LinkToArticles from '@components/LinkToArticles'
-import ServiceCard from '@components/ui/ServiceCard'
+// import LinkToArticles from '@components/LinkToArticles'
+import dynamic from 'next/dynamic'
 import { services } from '@lib/data'
 import React from 'react'
 import TypewriterComponent from 'typewriter-effect'
 import { useTranslation } from 'react-i18next';
+
+const ServiceCard = dynamic(() => import('@components/ui/ServiceCard'), { ssr: false });
+const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: false });
 
 const ServicePage = () => {
   const { t } = useTranslation('common'); 
