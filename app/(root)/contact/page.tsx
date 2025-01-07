@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
 
-const Contact = dynamic(() => import('@components/Contact'));
+const Contact = dynamic(() => import('@components/Contact'), { ssr: true, });
 
 const ContactPage = () => {
     return (

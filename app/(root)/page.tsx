@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
 
-const LandingContent = dynamic(() => import('@components/LandingContent'));
-const LandingHero = dynamic(() => import('@components/LandingHero'));
+const LandingContent = dynamic(() => import('@components/LandingContent'), { ssr: true, });
+const LandingHero = dynamic(() => import('@components/LandingHero'), { ssr: true, });
 
 function Home() {
   return (

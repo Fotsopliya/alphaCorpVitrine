@@ -3,7 +3,7 @@ import React from 'react'
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
 
-const BlogCard = dynamic(() => import("@components/ui/BlogCard"));
+const BlogCard = dynamic(() => import("@components/ui/BlogCard"), { ssr: false, });
 
 const NewsPage = () => {
   const { t } = useTranslation('common'); 
