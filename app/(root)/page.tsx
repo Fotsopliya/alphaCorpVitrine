@@ -1,8 +1,11 @@
-
-import LandingContent from '@components/LandingContent'
-import LandingHero from '@components/LandingHero'
+import dynamic from 'next/dynamic';
+// import LandingContent from '@components/LandingContent'
+// import LandingHero from '@components/LandingHero'
 import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
+
+const LandingContent = dynamic(() => import('@components/LandingContent'));
+const LandingHero = dynamic(() => import('@components/LandingHero'));
 
 function Home() {
   return (

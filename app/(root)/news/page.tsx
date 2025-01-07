@@ -1,7 +1,9 @@
 "use client"
 import React from 'react'
-import BlogCard from "@components/ui/BlogCard";
+import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
+
+const BlogCard = dynamic(() => import("@components/ui/BlogCard"));
 
 const NewsPage = () => {
   const { t } = useTranslation('common'); 
