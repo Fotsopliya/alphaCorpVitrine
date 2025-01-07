@@ -1,3 +1,4 @@
+"use client"
 
 import LinkToArticles from '@components/LinkToArticles'
 import ServiceCard from '@components/ui/ServiceCard'
