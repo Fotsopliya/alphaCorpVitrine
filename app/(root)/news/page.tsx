@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const BlogCard = dynamic(() => import("@components/ui/BlogCard"), { ssr: false, });
 
-const NewsPage = () => {
+const Page = () => {
   const { t } = useTranslation('common'); 
 
     return (
@@ -19,4 +19,4 @@ const NewsPage = () => {
     )
 }
 
-export default NewsPage
+export default Page

@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const ServiceCard = dynamic(() => import('@components/ui/ServiceCard'), { ssr: false });
 const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: false });
 
-const ServicePage = () => {
+const Page = () => {
   const { t } = useTranslation('common'); 
   return (
     <>
@@ -49,4 +49,4 @@ const ServicePage = () => {
   )
 }
 
-export default ServicePage
+export default Page

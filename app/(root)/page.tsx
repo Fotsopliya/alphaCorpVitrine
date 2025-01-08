@@ -11,7 +11,7 @@ const LandingHero = dynamic(() => import('@components/LandingHero'), { ssr: fals
 const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: false });
 
 
-function Home() {
+function Page() {
   return (
     <section className=' my-20'>
       <LandingHero />
@@ -23,4 +23,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Page;

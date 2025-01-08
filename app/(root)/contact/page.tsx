@@ -1,14 +1,12 @@
-"use client"
-
 import dynamic from 'next/dynamic';
 // import LinkToArticles from '@components/LinkToArticles'
 import React from 'react'
 
-const Contact = dynamic(() => import('@components/Contact'), { ssr: false, });
-const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: false });
+const Contact = dynamic(() => import('@components/Contact'), { ssr: true, });
+const LinkToArticles = dynamic(() => import('@components/LinkToArticles'), { ssr: true });
 
 
-const ContactPage = () => {
+const Page = () => {
     return (
         <section className='my-20'>
             <div className='px-[7%]'>
@@ -20,4 +18,4 @@ const ContactPage = () => {
     )
 }
 
-export default ContactPage
+export default Page
